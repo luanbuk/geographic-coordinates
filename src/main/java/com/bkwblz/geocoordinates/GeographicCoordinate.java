@@ -2,13 +2,13 @@ package com.bkwblz.geocoordinates;
 
 import java.math.BigDecimal;
 
-public class GeographicalCoordinate {
+public class GeographicCoordinate {
 
     public final BigDecimal latitude;
 
     public final BigDecimal longitude;
 
-    public GeographicalCoordinate(BigDecimal latitude, BigDecimal longitude) {
+    public GeographicCoordinate(BigDecimal latitude, BigDecimal longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }

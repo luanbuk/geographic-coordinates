@@ -1,0 +1,6 @@
+environment:
+    integrations:
+        tomtom:
+            host: ${TOMTOM_HOST}
+            key: ${TOMTOM_KEY}
+

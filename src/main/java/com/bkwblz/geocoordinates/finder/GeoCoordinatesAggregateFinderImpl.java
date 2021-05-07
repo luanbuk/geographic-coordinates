@@ -1,6 +1,6 @@
 package com.bkwblz.geocoordinates.finder;
 
-import com.bkwblz.geocoordinates.GeographicalCoordinate;
+import com.bkwblz.geocoordinates.GeographicCoordinate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,7 @@ public class GeoCoordinatesAggregateFinderImpl implements GeoCoordinatesAggregat
     public List<GeoCoordinateDelegatedFinder> delegatedFinders;
 
     @Override
-    public Optional<GeographicalCoordinate> findGeoCoordinateByZipCode(String zipCode) {
+    public Optional<GeographicCoordinate> findGeoCoordinateByZipCode(String zipCode) {
         return delegatedFinders.stream().map(f -> f.findGeoCoordinateByZipCode(zipCode))
                 .filter(Optional::isPresent).map(Optional::get)
                 .findFirst();
